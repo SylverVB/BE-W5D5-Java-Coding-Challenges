@@ -1,5 +1,8 @@
 package com.lab;
 
+// import java.util.Arrays;
+// import java.util.List;
+
 public class IndexOf {
     /**
      * Find the position of a number in an array.
@@ -10,7 +13,8 @@ public class IndexOf {
      * @return the first index (position) of n in arr. If n does not exist in arr, return -1.
      */
     public int getIndex(int[] arr, int n) {
-        // Loop through the array to find the first occurrence of the number 'n'
+
+        // Option 1. Loop through the array to find the first occurrence of the number 'n'
         for (int i = 0; i < arr.length; i++) {
             // Check if the current element equals the target value 'n'
             if (arr[i] == n) {
@@ -20,6 +24,15 @@ public class IndexOf {
         }
         // If not found, return -1
         return -1;
+
+        // For large arrays, the above approach is more efficient because it avoids boxing and creating a new list. But for simplicity, indexOf() is a clean solution.
+
+        // Option 2. Using indexOf()
+        // // Convert int[] to List<Integer>
+        // List<Integer> list = Arrays.stream(arr).boxed().toList();
+        
+        // // Use indexOf() method to find the position
+        // return list.indexOf(n);
     }
 
     public static void main(String[] args) {
