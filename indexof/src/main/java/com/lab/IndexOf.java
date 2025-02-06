@@ -21,4 +21,12 @@ public class IndexOf {
         // If not found, return -1
         return -1;
     }
+
+    public static void main(String[] args) {
+        // Example of using the getIndex method
+        IndexOf indexOf = new IndexOf();
+        int[] arr = {0, 1, 7, 3, 4};
+        int n = 7;
+        System.out.println("Index of " + n + ": " + indexOf.getIndex(arr, n));
+    }
 }
